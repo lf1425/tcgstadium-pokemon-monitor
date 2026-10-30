@@ -26,13 +26,22 @@ export default async function handler(req,res){
   if(!ok) {
     console.error("Discord signature verification failed");
     return res.status(401).send("Invalid signature");
-  }let interaction;try{interaction=JSON.parse(body.toString("utf8"));}catch{return res.status(400).send("Invalid JSON");}if(interaction.type===1)return res.status(200).json({type:1});if(interaction.type===3){
+  }let interaction;try{interaction=JSON.parse(body.toString("utf8"));}catch{return res.status(400).send("Invalid JSON");}console.log("Parsed Discord interaction", {type:interaction.type, customId:interaction.data?.custom_id||null, applicationIdPresent:!!interaction.application_id});
+if(interaction.type===1) {
+  console.log("Discord PING verification received");
+  return res.status(200).json({type:1});
+}
+if(interaction.type===3){
+  console.log("Button click recognized; acknowledging");
   // Acknowledge the component immediately so Discord's 3-second deadline is met.
   res.status(200).json({type:6});
   try {
+    console.log("Rendering button view");
     const payload=await render(interaction.data?.custom_id||"");
+    console.log("Button view rendered; updating Discord message");
     const editUrl="https://discord.com/api/v10/webhooks/"+interaction.application_id+"/"+interaction.token+"/messages/@original";
     const edited=await fetch(editUrl,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+    console.log("Discord message update response:",edited.status);
     if(!edited.ok) console.error("Discord message update failed:",edited.status,await edited.text());
   } catch(error) {
     console.error("Button interaction failed:",error);
