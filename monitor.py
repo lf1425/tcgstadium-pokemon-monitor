@@ -6,6 +6,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin
+from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
@@ -15,6 +16,8 @@ STATE = ROOT / "state.json"
 COLLECTION = "https://tcg-stadium.com/collections/english-sealed-products"
 WEBHOOK = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
 HEADERS = {"User-Agent": "PersonalTCGProductMonitor/1.0 (+GitHub Actions)"}
+EASTERN = ZoneInfo("America/New_York")
+HEARTBEAT_HOURS = (0, 8, 12, 16, 20)
 
 
 def get_products():
@@ -85,6 +88,13 @@ def format_price(value):
     return f"${value:,.2f}" if value is not None else "Unavailable"
 
 
+def send_message(content):
+    if not WEBHOOK:
+        raise RuntimeError("Missing DISCORD_WEBHOOK_URL repository secret.")
+    response = requests.post(WEBHOOK, json={"content": content}, timeout=20)
+    response.raise_for_status()
+
+
 def send_alert(title, description, item, color):
     if not WEBHOOK:
         raise RuntimeError("Missing DISCORD_WEBHOOK_URL repository secret.")
@@ -110,6 +120,36 @@ def send_alert(title, description, item, color):
     response.raise_for_status()
 
 
+def send_heartbeat_if_due(state):
+    now = datetime.now(EASTERN)
+    slot = now.strftime("%Y-%m-%d %H:00")
+
+    # The first successful scan after this feature is installed sends a
+    # one-time test message. It also marks the current checkpoint as covered,
+    # if the test happens during one of the regular heartbeat hours.
+    if not state.get("heartbeat_test_sent"):
+        send_message(
+            "⚡ **Pokémon Trainer Check-In — Test Successful!**\n"
+            "Your TCGStadium monitor completed a scan and is online. "
+            "No new Pokémon caught yet unless a separate product alert just arrived. "
+            "Next trainer check-in: 8 AM, noon, 4 PM, 8 PM, or midnight Eastern."
+        )
+        state["heartbeat_test_sent"] = True
+        if now.hour in HEARTBEAT_HOURS:
+            state["last_heartbeat_slot"] = slot
+        print("Sent one-time heartbeat test message.")
+        return
+
+    if now.hour in HEARTBEAT_HOURS and state.get("last_heartbeat_slot") != slot:
+        send_message(
+            "⚡ **Pokémon Trainer Check-In!**\n"
+            "No new Pokémon caught yet! Your TCGStadium monitor just completed "
+            "a successful scan. Keep those Poké Balls ready!"
+        )
+        state["last_heartbeat_slot"] = slot
+        print(f"Sent scheduled heartbeat for {slot} Eastern.")
+
+
 def main():
     current = get_products()
     try:
@@ -119,22 +159,21 @@ def main():
 
     previous = old_state.get("products", {})
     if not old_state.get("initialized"):
-        STATE.write_text(json.dumps({
+        new_state = {
             "initialized": True,
             "products": current,
-        }, indent=2))
-        if WEBHOOK:
-            response = requests.post(
-                WEBHOOK,
-                json={"content": (
-                    "✅ TCGStadium monitor is online. "
-                    f"Baseline saved for {len(current)} English sealed products."
-                )},
-                timeout=20,
-            )
-            response.raise_for_status()
-        else:
-            raise RuntimeError("Missing DISCORD_WEBHOOK_URL repository secret.")
+            **{
+                key: value for key, value in old_state.items()
+                if key.startswith("heartbeat_") or key == "last_heartbeat_slot"
+            },
+        }
+        STATE.write_text(json.dumps(new_state, indent=2))
+        send_message(
+            "✅ TCGStadium monitor is online. "
+            f"Baseline saved for {len(current)} English sealed products."
+        )
+        send_heartbeat_if_due(new_state)
+        STATE.write_text(json.dumps(new_state, indent=2))
         print(f"Initial baseline saved for {len(current)} products.")
         return
 
@@ -173,16 +212,25 @@ def main():
                     0x3498DB,
                 ))
 
-    # Save state only after scanning succeeds. GitHub Actions commits this file.
-    STATE.write_text(json.dumps({
+    new_state = {
         "initialized": True,
         "products": current,
-    }, indent=2))
+        **{
+            key: value for key, value in old_state.items()
+            if key.startswith("heartbeat_") or key == "last_heartbeat_slot"
+        },
+    }
 
+    # Product changes are still processed exactly as before.
     for event in events:
         send_alert(*event)
 
-    print(f"Scanned {len(current)} products; sent {len(events)} alert(s).")
+    # Heartbeats only follow a successful product scan.
+    send_heartbeat_if_due(new_state)
+
+    # Persist product state and heartbeat schedule together.
+    STATE.write_text(json.dumps(new_state, indent=2))
+    print(f"Scanned {len(current)} products; sent {len(events)} product alert(s).")
 
 
 if __name__ == "__main__":
