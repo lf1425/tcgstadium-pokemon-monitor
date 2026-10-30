@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "tweetnacl": "^1.0.3"
+    "tweetnacl": "^1.0.3",
+    "@vercel/functions": "^2.2.0"
   }
 }
