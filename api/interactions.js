@@ -58,4 +58,4 @@ if(interaction.type===3){
   })());
   return;
 }
-}return res.status(200).json({type:4,data:{content:"Unsupported interaction.",flags:64}});}
+return res.status(200).json({type:4,data:{content:"Unsupported interaction.",flags:64}});}
