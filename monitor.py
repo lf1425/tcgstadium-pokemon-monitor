@@ -124,9 +124,6 @@ def send_heartbeat_if_due(state):
     now = datetime.now(EASTERN)
     slot = now.strftime("%Y-%m-%d %H:00")
 
-    # The first successful scan after this feature is installed sends a
-    # one-time test message. It also marks the current checkpoint as covered,
-    # if the test happens during one of the regular heartbeat hours.
     if not state.get("heartbeat_test_sent"):
         send_message(
             "⚡ **Pokémon Trainer Check-In — Test Successful!**\n"
@@ -158,15 +155,16 @@ def main():
         old_state = {}
 
     previous = old_state.get("products", {})
+    new_state = {
+        "initialized": True,
+        "products": current,
+        **{
+            key: value for key, value in old_state.items()
+            if key.startswith("heartbeat_") or key == "last_heartbeat_slot"
+        },
+    }
+
     if not old_state.get("initialized"):
-        new_state = {
-            "initialized": True,
-            "products": current,
-            **{
-                key: value for key, value in old_state.items()
-                if key.startswith("heartbeat_") or key == "last_heartbeat_slot"
-            },
-        }
         STATE.write_text(json.dumps(new_state, indent=2))
         send_message(
             "✅ TCGStadium monitor is online. "
@@ -212,23 +210,15 @@ def main():
                     0x3498DB,
                 ))
 
-    new_state = {
-        "initialized": True,
-        "products": current,
-        **{
-            key: value for key, value in old_state.items()
-            if key.startswith("heartbeat_") or key == "last_heartbeat_slot"
-        },
-    }
+    # Preserve the original behavior: commit the successful product scan
+    # before attempting Discord alerts, so failed alerts do not replay later.
+    STATE.write_text(json.dumps(new_state, indent=2))
 
-    # Product changes are still processed exactly as before.
     for event in events:
         send_alert(*event)
 
-    # Heartbeats only follow a successful product scan.
+    # Heartbeats only follow a successful product scan and successful alert delivery.
     send_heartbeat_if_due(new_state)
-
-    # Persist product state and heartbeat schedule together.
     STATE.write_text(json.dumps(new_state, indent=2))
     print(f"Scanned {len(current)} products; sent {len(events)} product alert(s).")
 
