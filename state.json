@@ -254,5 +254,6 @@
       "url": "https://tcg-stadium.com/products/pokemon-prismatic-evolutions-tech-sticker-collection"
     }
   },
-  "heartbeat_test_sent": true
+  "heartbeat_test_sent": true,
+  "last_heartbeat_slot": "2026-10-30 00:00"
 }
