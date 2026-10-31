@@ -52,13 +52,13 @@
     "30th-celebrations-booster-bundle": {
       "title": "30th Celebrations Booster Bundle",
       "price": 69.99,
-      "available": true,
+      "available": false,
       "url": "https://tcg-stadium.com/products/30th-celebrations-booster-bundle"
     },
     "pre-order-30th-celebration-knock-out-collection-box-copy": {
       "title": "30th Celebration Ex Box (styles may vary)",
       "price": 49.99,
-      "available": true,
+      "available": false,
       "url": "https://tcg-stadium.com/products/pre-order-30th-celebration-knock-out-collection-box-copy"
     },
     "first-partner-illustration-collection-series-3-first-partner-collection-2026": {
