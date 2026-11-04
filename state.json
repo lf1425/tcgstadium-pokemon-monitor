@@ -64,7 +64,7 @@
     "pre-order-pitch-black-booster-bundle": {
       "title": "Pitch Black Booster Bundle",
       "price": 38.99,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-pitch-black-booster-bundle"
     },
     "pre-order-chaos-rising-build-battle-box-me04-chaos-rising": {
@@ -76,7 +76,7 @@
     "pre-order-chaos-rising-booster-bundle-me04-chaos-rising": {
       "title": "Chaos Rising Booster Bundle - ME04: Chaos Rising",
       "price": 38.16,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-chaos-rising-booster-bundle-me04-chaos-rising"
     },
     "ascended-heroes-first-partners-deluxe-pin-collection": {
@@ -166,7 +166,7 @@
     "cynthias-garchomp-ex-premium-collection-miscellaneous-cards-products-mcap": {
       "title": "Cynthia's Garchomp ex Premium Collection - Miscellaneous Cards & Products (MCAP)",
       "price": 74.99,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/cynthias-garchomp-ex-premium-collection-miscellaneous-cards-products-mcap"
     },
     "pre-order-pokemon-tcg-scarlet-violet-10-5-black-bolt-elite-trainer-copy": {
