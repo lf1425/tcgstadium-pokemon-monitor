@@ -160,7 +160,7 @@
     "charizard-ex-special-collection-miscellaneous-cards-products-mcap": {
       "title": "Charizard ex Special Collection - Miscellaneous Cards & Products (MCAP)",
       "price": 59.99,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/charizard-ex-special-collection-miscellaneous-cards-products-mcap"
     },
     "cynthias-garchomp-ex-premium-collection-miscellaneous-cards-products-mcap": {
@@ -190,7 +190,7 @@
     "prismatic-evolutions-surprise-box-sv-prismatic-evolutions-pre": {
       "title": "Prismatic Evolutions Surprise Box - SV: Prismatic Evolutions",
       "price": 64.99,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/prismatic-evolutions-surprise-box-sv-prismatic-evolutions-pre"
     },
     "prismatic-evolutions-booster-bundle-sv-prismatic-evolutions-pre": {
