@@ -118,7 +118,7 @@
     "mega-evolution-enhanced-booster-box-copy": {
       "title": "Mega Evolution Regular Booster Box",
       "price": 299.99,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/mega-evolution-enhanced-booster-box-copy"
     },
     "surging-sparks-elite-trainer-box": {
