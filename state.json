@@ -1,6 +1,12 @@
 {
   "initialized": true,
   "products": {
+    "30th-celebration-ditto-premium-collection": {
+      "title": "30th Celebration Ditto Premium Collection",
+      "price": 94.99,
+      "available": true,
+      "url": "https://tcg-stadium.com/products/30th-celebration-ditto-premium-collection"
+    },
     "shrouded-fable-kingdra-or-greninja-special-illustration-collection-styles-may-vary": {
       "title": "Shrouded Fable Kingdra or Greninja Special Illustration Collection (styles may vary)",
       "price": 199.99,
