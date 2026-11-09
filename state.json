@@ -67,6 +67,12 @@
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-sleeved-booster-pack-copy"
     },
+    "pre-order-delta-reign-sleeved-booster-pack": {
+      "title": "Delta Reign Sleeved Booster Pack",
+      "price": 14.99,
+      "available": true,
+      "url": "https://tcg-stadium.com/products/pre-order-delta-reign-sleeved-booster-pack"
+    },
     "30th-celebrations-booster-bundle": {
       "title": "30th Celebrations Booster Bundle",
       "price": 69.99,
@@ -78,6 +84,12 @@
       "price": 49.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-30th-celebration-knock-out-collection-box-copy"
+    },
+    "pre-order-30th-celebration-elite-trainer-box-copy": {
+      "title": "30th Celebration Knock Out Collection Box",
+      "price": 24.99,
+      "available": true,
+      "url": "https://tcg-stadium.com/products/pre-order-30th-celebration-elite-trainer-box-copy"
     },
     "pre-order-30th-celebration-elite-trainer-box": {
       "title": "30th Celebration Elite Trainer Box",
