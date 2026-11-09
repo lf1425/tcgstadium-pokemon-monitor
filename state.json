@@ -238,7 +238,7 @@
     "pokemon-prismatic-evolutions-tech-sticker-collection": {
       "title": "Prismatic Evolutions Tech Sticker Collection (Random Variation)",
       "price": 41.99,
-      "available": true,
+      "available": false,
       "url": "https://tcg-stadium.com/products/pokemon-prismatic-evolutions-tech-sticker-collection"
     }
   },
