@@ -178,7 +178,7 @@
     "surging-sparks-elite-trainer-box": {
       "title": "Surging Sparks Elite Trainer Box",
       "price": 119.99,
-      "available": true,
+      "available": false,
       "url": "https://tcg-stadium.com/products/surging-sparks-elite-trainer-box"
     },
     "twilight-masquerade-elite-trainer-box": {
