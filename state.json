@@ -3,7 +3,7 @@
   "products": {
     "30th-celebration-ditto-premium-collection": {
       "title": "30th Celebration Ditto Premium Collection",
-      "price": 94.99,
+      "price": 74.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/30th-celebration-ditto-premium-collection"
     },
@@ -12,24 +12,6 @@
       "price": 199.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/shrouded-fable-kingdra-or-greninja-special-illustration-collection-styles-may-vary"
-    },
-    "30th-celebration-battle-deck-espeon-ex-or-umbreon-ex-1-battle-deck-per-order-styles-may-vary": {
-      "title": "30th Celebration Battle Deck Espeon ex or Umbreon ex (1 Battle Deck per Order) - Styles May Vary",
-      "price": 24.99,
-      "available": false,
-      "url": "https://tcg-stadium.com/products/30th-celebration-battle-deck-espeon-ex-or-umbreon-ex-1-battle-deck-per-order-styles-may-vary"
-    },
-    "deck-crafters-collection-meowth-ex": {
-      "title": "Deck Crafter's Collection - Meowth ex",
-      "price": 7.49,
-      "available": false,
-      "url": "https://tcg-stadium.com/products/deck-crafters-collection-meowth-ex"
-    },
-    "30th-celebration-ultra-premium-collection-day-or-night-1-ultra-premium-collection-per-order-styles-may-vary": {
-      "title": "30th Celebration Ultra Premium Collection Day Or Night (1 Ultra-Premium Collection per Order) - Styles May Vary",
-      "price": 399.99,
-      "available": false,
-      "url": "https://tcg-stadium.com/products/30th-celebration-ultra-premium-collection-day-or-night-1-ultra-premium-collection-per-order-styles-may-vary"
     },
     "151-elite-trainer-box-case-sv-scarlet-violet-151": {
       "title": "151 Elite Trainer Box Case - SV: Scarlet & Violet 151",
@@ -45,19 +27,19 @@
     },
     "pre-order-delta-reign-3-pack-blister-copy": {
       "title": "Delta Reign Booster Bundle",
-      "price": 49.99,
+      "price": 37.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-3-pack-blister-copy"
     },
     "pre-order-delta-reign-elite-trainer-box-copy": {
       "title": "Delta Reign 3-Pack Blister",
-      "price": 34.99,
+      "price": 16.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-elite-trainer-box-copy"
     },
     "pre-order-delta-reign-booster-box-copy": {
       "title": "Delta Reign Elite Trainer Box",
-      "price": 98.99,
+      "price": 79.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-booster-box-copy"
     },
