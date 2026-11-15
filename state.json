@@ -1,12 +1,6 @@
 {
   "initialized": true,
   "products": {
-    "30th-celebration-ditto-premium-collection": {
-      "title": "30th Celebration Ditto Premium Collection",
-      "price": 64.99,
-      "available": false,
-      "url": "https://tcg-stadium.com/products/30th-celebration-ditto-premium-collection"
-    },
     "shrouded-fable-kingdra-or-greninja-special-illustration-collection-styles-may-vary": {
       "title": "Shrouded Fable Kingdra or Greninja Special Illustration Collection (styles may vary)",
       "price": 199.99,
@@ -39,7 +33,7 @@
     },
     "pre-order-delta-reign-booster-box-copy": {
       "title": "Delta Reign Elite Trainer Box",
-      "price": 79.99,
+      "price": 69.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-booster-box-copy"
     },
@@ -51,7 +45,7 @@
     },
     "pre-order-delta-reign-sleeved-booster-pack": {
       "title": "Delta Reign Sleeved Booster Pack",
-      "price": 6.99,
+      "price": 5.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-sleeved-booster-pack"
     },
@@ -63,7 +57,7 @@
     },
     "pre-order-30th-celebration-knock-out-collection-box-copy": {
       "title": "30th Celebration Ex Box (styles may vary)",
-      "price": 49.99,
+      "price": 39.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-30th-celebration-knock-out-collection-box-copy"
     },
@@ -75,7 +69,7 @@
     },
     "pre-order-30th-celebration-elite-trainer-box": {
       "title": "30th Celebration Elite Trainer Box",
-      "price": 109.99,
+      "price": 99.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-30th-celebration-elite-trainer-box"
     },
