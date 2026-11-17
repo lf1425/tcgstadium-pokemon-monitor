@@ -1,6 +1,12 @@
 {
   "initialized": true,
   "products": {
+    "30th-celebration-figure-collection-mew-or-mewtow-1-figure-collection-per-order-styles-may-vary": {
+      "title": "30th Celebration Figure Collection Mew or Mewtow (1 Figure Collection per Order) - Styles May Vary",
+      "price": 64.99,
+      "available": true,
+      "url": "https://tcg-stadium.com/products/30th-celebration-figure-collection-mew-or-mewtow-1-figure-collection-per-order-styles-may-vary"
+    },
     "shrouded-fable-kingdra-or-greninja-special-illustration-collection-styles-may-vary": {
       "title": "Shrouded Fable Kingdra or Greninja Special Illustration Collection (styles may vary)",
       "price": 199.99,
@@ -21,7 +27,7 @@
     },
     "pre-order-delta-reign-3-pack-blister-copy": {
       "title": "Delta Reign Booster Bundle",
-      "price": 37.99,
+      "price": 34.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-3-pack-blister-copy"
     },
@@ -33,19 +39,19 @@
     },
     "pre-order-delta-reign-booster-box-copy": {
       "title": "Delta Reign Elite Trainer Box",
-      "price": 69.99,
+      "price": 64.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-booster-box-copy"
     },
     "pre-order-delta-reign-sleeved-booster-pack-copy": {
       "title": "Delta Reign Booster Box",
-      "price": 194.99,
+      "price": 189.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-sleeved-booster-pack-copy"
     },
     "pre-order-delta-reign-sleeved-booster-pack": {
       "title": "Delta Reign Sleeved Booster Pack",
-      "price": 5.99,
+      "price": 5.49,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-sleeved-booster-pack"
     },
