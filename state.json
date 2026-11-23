@@ -82,7 +82,7 @@
     "first-partner-illustration-collection-series-3-first-partner-collection-2026": {
       "title": "First Partner Illustration Collection (Series 3) - First Partner Collection 2026",
       "price": 19.99,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/first-partner-illustration-collection-series-3-first-partner-collection-2026"
     },
     "ascended-heroes-mega-ex-box-me-ascended-heroes-1-styles-may-vary": {
@@ -160,13 +160,13 @@
     "surging-sparks-elite-trainer-box": {
       "title": "Surging Sparks Elite Trainer Box",
       "price": 119.99,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/surging-sparks-elite-trainer-box"
     },
     "twilight-masquerade-elite-trainer-box": {
       "title": "Twilight Masquerade Elite Trainer Box",
       "price": 104.99,
-      "available": false,
+      "available": true,
       "url": "https://tcg-stadium.com/products/twilight-masquerade-elite-trainer-box"
     },
     "team-rocket-tin-styles-may-vary": {
