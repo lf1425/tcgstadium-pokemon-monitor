@@ -88,7 +88,7 @@
     "pokemon-scarlet-violet-151-blooming-waters-premium-collection": {
       "title": "Pokemon: Scarlet & Violet - 151 - Blooming Waters - Premium Collection",
       "price": 369.99,
-      "available": true,
+      "available": false,
       "url": "https://tcg-stadium.com/products/pokemon-scarlet-violet-151-blooming-waters-premium-collection"
     }
   },
