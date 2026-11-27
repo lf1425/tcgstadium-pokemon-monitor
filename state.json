@@ -46,7 +46,7 @@
     "pre-order-30th-celebration-elite-trainer-box-copy": {
       "title": "30th Celebration Knock Out Collection Box",
       "price": 14.99,
-      "available": true,
+      "available": false,
       "url": "https://tcg-stadium.com/products/pre-order-30th-celebration-elite-trainer-box-copy"
     },
     "pre-order-chaos-rising-build-battle-box-me04-chaos-rising": {
@@ -72,12 +72,6 @@
       "price": 8.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pokemon-trading-card-game-scarlet-and-violet-journey-together-booster-sleeves-pack-styles-may-vary"
-    },
-    "pokemon-scarlet-violet-151-blooming-waters-premium-collection": {
-      "title": "Pokemon: Scarlet & Violet - 151 - Blooming Waters - Premium Collection",
-      "price": 369.99,
-      "available": false,
-      "url": "https://tcg-stadium.com/products/pokemon-scarlet-violet-151-blooming-waters-premium-collection"
     }
   },
   "heartbeat_test_sent": true,
