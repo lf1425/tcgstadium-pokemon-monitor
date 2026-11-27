@@ -3,7 +3,7 @@
   "products": {
     "delta-reign-build-and-battle-box": {
       "title": "Delta Reign Build and Battle Box",
-      "price": 29.99,
+      "price": 24.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/delta-reign-build-and-battle-box"
     },
@@ -37,23 +37,11 @@
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-checklane-blister"
     },
-    "pre-order-delta-reign-sleeved-booster-pack-copy": {
-      "title": "Delta Reign Booster Box",
-      "price": 189.99,
-      "available": false,
-      "url": "https://tcg-stadium.com/products/pre-order-delta-reign-sleeved-booster-pack-copy"
-    },
     "pre-order-delta-reign-sleeved-booster-pack": {
       "title": "Delta Reign Sleeved Booster Pack",
       "price": 4.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/pre-order-delta-reign-sleeved-booster-pack"
-    },
-    "pre-order-30th-celebration-ex-box-styles-may-vary-copy": {
-      "title": "30th Celebration Poster Collection",
-      "price": 19.99,
-      "available": false,
-      "url": "https://tcg-stadium.com/products/pre-order-30th-celebration-ex-box-styles-may-vary-copy"
     },
     "pre-order-30th-celebration-elite-trainer-box-copy": {
       "title": "30th Celebration Knock Out Collection Box",
