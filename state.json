@@ -1,6 +1,12 @@
 {
   "initialized": true,
   "products": {
+    "delta-reign-build-and-battle-box": {
+      "title": "Delta Reign Build and Battle Box",
+      "price": 34.99,
+      "available": true,
+      "url": "https://tcg-stadium.com/products/delta-reign-build-and-battle-box"
+    },
     "30th-celebration-figure-collection-mew-or-mewtow-1-figure-collection-per-order-styles-may-vary": {
       "title": "30th Celebration Figure Collection Mew or Mewtow (1 Figure Collection per Order) - Styles May Vary",
       "price": 59.99,
@@ -12,6 +18,12 @@
       "price": 199.99,
       "available": true,
       "url": "https://tcg-stadium.com/products/shrouded-fable-kingdra-or-greninja-special-illustration-collection-styles-may-vary"
+    },
+    "30th-celebrations-mini-tin-1-at-random": {
+      "title": "30th Celebrations Mini Tin - 1 at Random",
+      "price": 19.99,
+      "available": true,
+      "url": "https://tcg-stadium.com/products/30th-celebrations-mini-tin-1-at-random"
     },
     "151-elite-trainer-box-case-sv-scarlet-violet-151": {
       "title": "151 Elite Trainer Box Case - SV: Scarlet & Violet 151",
@@ -60,6 +72,12 @@
       "price": 69.99,
       "available": false,
       "url": "https://tcg-stadium.com/products/30th-celebrations-booster-bundle"
+    },
+    "pre-order-30th-celebration-ex-box-styles-may-vary-copy": {
+      "title": "30th Celebration Poster Collection",
+      "price": 24.99,
+      "available": true,
+      "url": "https://tcg-stadium.com/products/pre-order-30th-celebration-ex-box-styles-may-vary-copy"
     },
     "pre-order-30th-celebration-knock-out-collection-box-copy": {
       "title": "30th Celebration Ex Box (styles may vary)",
